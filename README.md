@@ -2,7 +2,7 @@
 ](https://cliente.primi.com.br)
 
 <div align="center">
-<h1>Essa é a API principal da Plataforma [Cliente Primi](https://cliente.primi.com.br)</h1>
+<h1>Essa é a API V2 da Plataforma [Cliente Primi](https://cliente.primi.com.br)</h1>
 <p>Nossa plataforma foi desenvolvida com o objetivo de ajudar os clientes a comprarem nossos selos.</p>
 </div>
 
