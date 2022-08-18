@@ -7,8 +7,8 @@ export interface HttpRequest {
   files?: any
 }
 
-export interface HttpResponse {
+export type HttpResponse<T = any> = {
   statusCode: number
-  body?: any
+  body?: T
   headers?: any
 }

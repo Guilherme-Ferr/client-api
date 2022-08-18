@@ -1,5 +1,5 @@
-import { HttpRequest, HttpResponse } from './http'
+import { HttpResponse } from './http'
 
-export interface IController {
-  handle(request: HttpRequest): Promise<HttpResponse>
+export abstract class Controller<T = any, R = any> {
+  abstract execute(request: T): Promise<HttpResponse<R>>
 }

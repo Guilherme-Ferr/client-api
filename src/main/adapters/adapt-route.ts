@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { HttpRequest, IController } from '../../presentation/protocols'
+import { HttpRequest, Controller } from '../../presentation/protocols'
 
 interface Token {
   id: number
@@ -13,7 +13,7 @@ interface ApiRequest extends Request {
   token: Token
 }
 
-export function adaptRoute(controller: IController) {
+export function adaptRoute(controller: Controller) {
   return async (req: ApiRequest, res: Response) => {
     const httpRequest: HttpRequest = {
       body: req.body,

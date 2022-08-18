@@ -1,39 +1,30 @@
 {
   "env": {
-    "browser": true,
-    "es2021": true
+    "es2021": true,
+    "node": true
   },
-  "extends": ["airbnb-base", "plugin:prettier/recommended"],
+  "extends": ["standard-with-typescript"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2019,
-    "sourceType": "module"
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
   "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
+    "comma-dangle": "off",
     "prettier/prettier": "error",
-    "import/prefer-default-export": "off",
-    "class-methods-use-this": "off",
-    "no-undef": "off",
-    "no-unused-vars": "off",
-    "no-useless-constructor": "off",
-    "no-empty-function": "off",
-    "no-param-reassign": "off",
-    "no-useless-escape": "off",
-    "no-await-in-loop": "off",
-    "no-continue": "off",
-    "code": 120,
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "ts": "never"
-      }
-    ]
-  },
-  "settings": {
-    "import/resolver": {
-      "typescript": {}
-    }
+    "@typescript-eslint/consistent-type-definitions": "off",
+    "@typescript-eslint/no-namespace": "off",
+    "@typescript-eslint/return-await": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/restrict-plus-operands": "off",
+    "@typescript-eslint/semi": "error",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/no-extraneous-class": "off",
+    "@typescript-eslint/no-invalid-void-type": "off",
+    "import/export": "off",
+    "@typescript-eslint/no-useless-constructor": "off",
+    "@typescript-eslint/no-redeclare": "off"
   }
 }
