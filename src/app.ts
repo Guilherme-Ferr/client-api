@@ -1,17 +1,17 @@
-import express from "express";
-import cors from "cors";
-import setUpRoutes from "./main/config/routes";
-import dotenv from "dotenv";
+import express from 'express'
+import cors from 'cors'
+import setUpRoutes from './main/configs/routes'
+import dotenv from 'dotenv'
 
 dotenv.config({
-  path: process.env.NODE_ENV === "test" ? ".env.test" : ".env",
-});
+  path: process.env.NODE_ENV === 'test' ? '.env.test' : '.env',
+})
 
-const app = express();
+const app = express()
 
-app.use(cors());
-app.use(express.json());
+app.use(cors())
+app.use(express.json())
 
-setUpRoutes(app);
+setUpRoutes(app)
 
-export { app };
+export { app }

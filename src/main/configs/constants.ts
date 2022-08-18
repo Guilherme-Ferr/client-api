@@ -1,4 +1,4 @@
-import "dotenv/config";
+import 'dotenv/config'
 
 export const {
   DB_DIALECT,
@@ -12,4 +12,4 @@ export const {
   PORT,
   SERVER_BASE_URL,
   TOKEN_SECRET_KEY,
-} = process.env;
+} = process.env
