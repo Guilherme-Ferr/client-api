@@ -5,7 +5,7 @@ import { makeAuthenticationController } from '../../factories/controller'
 const router = Router()
 
 export default (auth: Router): void => {
-  auth.get('/login', adaptRoute(makeAuthenticationController()))
+  auth.post('/login', adaptRoute(makeAuthenticationController()))
 }
 
 export { router }

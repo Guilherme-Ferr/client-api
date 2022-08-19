@@ -1,10 +1,10 @@
 import { User, Token } from '../../entities'
 
-export interface CreateToken {
-  execute: (input: CreateToken.Input) => Promise<CreateToken.Output>
+export interface TokenUseCase {
+  create: (input: TokenUseCase.Input) => Promise<TokenUseCase.Output>
 }
 
-export namespace CreateToken {
+export namespace TokenUseCase {
   export type Input = User
 
   export type Output = {

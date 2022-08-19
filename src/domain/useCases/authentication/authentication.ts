@@ -1,10 +1,10 @@
 import { User } from '../../entities'
 
-export interface Authentication {
-  execute: (input: Authentication.Input) => Promise<Authentication.Output>
+export interface AuthenticationUseCase {
+  login: (input: AuthenticationUseCase.Input) => Promise<AuthenticationUseCase.Output>
 }
 
-export namespace Authentication {
+export namespace AuthenticationUseCase {
   export type Input = {
     email: string
     password: string
