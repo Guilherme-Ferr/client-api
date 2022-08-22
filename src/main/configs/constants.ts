@@ -3,7 +3,7 @@ import 'dotenv/config'
 export const {
   DB_DIALECT,
   DB_HOST,
-  DB_USER,
+  DB_USERNAME,
   DB_PASSWORD,
   DB_NAME,
   SENDER_EMAIL,

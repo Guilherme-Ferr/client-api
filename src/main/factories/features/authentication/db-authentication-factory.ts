@@ -1,5 +1,5 @@
-import { DBAuthenticationFeature } from '../../../../data/features'
-import { makeKnexAuthenticationRepository } from '../../repositories'
+import { DBAuthenticationFeature } from 'data/features'
+import { makeKnexAuthenticationRepository } from 'main/factories/knex/repositories'
 
 export const makeDBAuthentication = (): DBAuthenticationFeature => {
   const repository = makeKnexAuthenticationRepository()

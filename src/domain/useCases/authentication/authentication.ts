@@ -1,7 +1,7 @@
-import { User } from '../../entities'
+import { Token } from 'domain/entities'
 
 export interface AuthenticationUseCase {
-  login: (input: AuthenticationUseCase.Input) => Promise<AuthenticationUseCase.Output>
+  authenticate: (input: AuthenticationUseCase.Input) => Promise<AuthenticationUseCase.Output>
 }
 
 export namespace AuthenticationUseCase {
@@ -9,5 +9,5 @@ export namespace AuthenticationUseCase {
     email: string
     password: string
   }
-  export type Output = User
+  export type Output = Token
 }
