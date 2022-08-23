@@ -1,21 +1,9 @@
 import { RequestHandler } from 'express'
-import { HttpRequest, Controller } from 'presentation/protocols'
+import { Controller } from '../../application/protocols'
 
-type RouteAdapter = (controller: Controller) => RequestHandler
-
-export const adaptRoute: RouteAdapter = (controller) => async (request, response) => {
-  const httpRequest: HttpRequest = await controller.execute({
-    ...request.body,
-    ...request.headers,
-    ...request.params,
-    ...request.query,
-  })
-
-  const httpResponse = await controller.execute(httpRequest)
-
-  if (httpResponse.headers) {
-    response.set(httpResponse.headers)
+export const adaptRoute = (controller: Controller): RequestHandler => {
+  return async (req, res) => {
+    const { statusCode, body } = await controller.handle({ ...req.body })
+    res.status(statusCode).json(body)
   }
-
-  return response.status(httpResponse.statusCode).json(httpResponse.body)
 }

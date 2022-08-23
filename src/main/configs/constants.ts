@@ -1,5 +1,12 @@
 import 'dotenv/config'
 
+export const RESPONSE_TYPE_ERROR = {
+  ALREADY_EXISTS: 'ALREADY_EXISTS',
+  NOT_FOUND: 'NOT_FOUND',
+  NOT_ALLOWED: 'NOT_ALLOWED',
+  SERVER_ERROR: 'SERVER_ERROR',
+}
+
 export const {
   DB_DIALECT,
   DB_HOST,

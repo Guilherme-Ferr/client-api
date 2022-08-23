@@ -1,10 +1,5 @@
-import { serverError } from 'main/utils/apiResponse'
+import { switchError } from '../../main/utils/switch-error'
 import { HttpResponse } from './http'
-
-// export abstract class Controller<T = any, R = any> {
-//   abstract execute(request: T): Promise<HttpResponse<R>>
-
-// }
 
 export abstract class Controller<T = any, R = any> {
   abstract perform(httpRequest: T): Promise<HttpResponse<R>>
@@ -13,7 +8,7 @@ export abstract class Controller<T = any, R = any> {
     try {
       return await this.perform(httpRequest)
     } catch (error) {
-      return serverError(error)
+      return switchError(error)
     }
   }
 }

@@ -1,11 +1,11 @@
 import { Response } from 'express'
-import { HttpResponse } from '../../presentation/protocols'
+import { HttpResponse } from '../../application/protocols'
 
-export function ok(payload = {}, message = 'ok'): HttpResponse {
+export function ok(payload = {}): HttpResponse {
   return {
     statusCode: 200,
     body: {
-      message,
+      message: 'ok',
       payload,
     },
   }

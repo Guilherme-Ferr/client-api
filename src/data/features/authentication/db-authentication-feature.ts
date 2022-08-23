@@ -1,22 +1,14 @@
-import { User } from 'domain/entities'
-import { AuthenticationUseCase } from 'domain/useCases'
-import { KnexAuthenticationRepository } from 'infra/repositories'
+import { AuthenticationUseCase } from '../../../domain/useCases'
+import { AuthenticationRepository } from '../../../infra/repositories'
 
 export class DBAuthenticationFeature implements AuthenticationUseCase {
-  constructor(private readonly authentication: KnexAuthenticationRepository) {}
+  constructor(private readonly authentication: AuthenticationRepository) {}
 
   async authenticate(input: AuthenticationUseCase.Input): Promise<AuthenticationUseCase.Output> {
-    const validateUser = await this.authentication.getUserByEmail(input.email)
+    const validUserEmail = await this.authentication.authenticate(input)
 
-    if (!validateUser || validateUser == null) throw new Error('NOT_FOUND_usuario')
+    if (!validUserEmail || validUserEmail == null) throw new Error('NOT_FOUND_usuario')
 
-    const successLogin: User =
-      validateUser && (await this.authentication.login({ email: input.email, password: input.password } as User))
-    console.log(
-      '🚀 ~ file: db-authentication-feature.ts ~ line 14 ~ DBAuthenticationFeature ~ login ~ successLogin',
-      successLogin,
-    )
-
-    return successLogin
+    return validUserEmail
   }
 }

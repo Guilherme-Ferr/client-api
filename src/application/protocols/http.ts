@@ -3,8 +3,6 @@ export interface HttpRequest {
   params?: any
   query?: any
   headers?: any
-  file?: Express.Multer.File
-  files?: any
 }
 
 export type HttpResponse<T = any> = {

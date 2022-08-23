@@ -1,11 +1,11 @@
 import { Router } from 'express'
-import { adaptRoute } from 'main/adapters/adapt-route'
-import { makeAuthenticationController } from 'main/factories/controller'
+import { adaptRoute } from '../../adapters'
+import { makeAuthenticationController } from '../../factories/controller'
 
 const router = Router()
 
-export default (auth: Router): void => {
-  auth.post('/client/login', adaptRoute(makeAuthenticationController()))
+export default (auth: Router) => {
+  auth.post('/login', adaptRoute(makeAuthenticationController()))
 }
 
 export { router }

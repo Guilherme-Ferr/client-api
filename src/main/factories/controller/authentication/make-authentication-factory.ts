@@ -1,5 +1,5 @@
-import { makeDBAuthentication } from 'main/factories/features'
-import { AuthenticationController } from 'presentation/controllers'
+import { AuthenticationController } from '../../../../application/controllers'
+import { makeDBAuthentication } from '../../features'
 
 export const makeAuthenticationController = (): AuthenticationController => {
   const authenticationService = makeDBAuthentication()
