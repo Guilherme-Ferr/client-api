@@ -5,6 +5,7 @@ export async function validatePassword(requestPassword: string, hashedDBPassword
   const bcryptedPassword = await compare(requestPassword, hashedDBPassword)
   if (!bcryptedPassword) {
     const hashRequest = sha256(requestPassword)
-    hashRequest == hashedDBPassword ? true : false
+    if (hashRequest == hashedDBPassword) return true
+    return false
   } else return true
 }
