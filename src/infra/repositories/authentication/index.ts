@@ -1,1 +1,1 @@
-export * from './knex-authentication-repository'
+export * from './authentication-repository'
