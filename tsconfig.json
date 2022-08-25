@@ -7,8 +7,8 @@
     "forceConsistentCasingInFileNames": true,
     "strict": false,
     "moduleResolution": "node",
-    "skipLibCheck": true
-    // "paths": { "@/*": ["*"] }
+    "skipLibCheck": true,
+    "resolveJsonModule": true
   },
   "include": ["src/**/*.ts"]
 }

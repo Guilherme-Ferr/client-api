@@ -11,7 +11,7 @@ function errorLogger(error) {
 
   const fileError = path.resolve(pathError, 'error.log')
 
-  const stringError = `------------------------------------------------ Date: ${date} Error: ${error.name}: ${error.message} at ${error.stack}
+  const stringError = `---- Date: ${date} Error: ${error.name}: ${error.message} at ${error.stack}
 `
 
   appendFile(fileError, stringError, (errorLog) => {

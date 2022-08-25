@@ -5,7 +5,6 @@ export function ok(payload = {}): HttpResponse {
   return {
     statusCode: 200,
     body: {
-      statusCode: 200,
       message: 'ok',
       payload,
     },
@@ -16,7 +15,6 @@ export function create(payload = {}): HttpResponse {
   return {
     statusCode: 201,
     body: {
-      statusCode: 201,
       message: 'created successfully',
       payload,
     },
@@ -27,7 +25,6 @@ export function badRequest(payload = {}): HttpResponse {
   return {
     statusCode: 400,
     body: {
-      statusCode: 400,
       message: 'bad request',
       payload,
     },
@@ -38,7 +35,6 @@ export function serverError(): HttpResponse {
   return {
     statusCode: 500,
     body: {
-      statusCode: 500,
       message: 'internal server error',
       errors: [
         {
@@ -53,7 +49,6 @@ export function serverTimeout(): HttpResponse {
   return {
     statusCode: 504,
     body: {
-      statusCode: 504,
       message: 'server response error',
       errors: [
         {
@@ -68,7 +63,6 @@ export function notFound(field: string): HttpResponse {
   return {
     statusCode: 404,
     body: {
-      statusCode: 404,
       message: 'not found',
       errors: [
         {
@@ -83,7 +77,6 @@ export function unauthorized(field: string): HttpResponse {
   return {
     statusCode: 401,
     body: {
-      statusCode: 401,
       message: 'unauthorized',
       errors: [
         {
@@ -98,7 +91,6 @@ export function expired(): HttpResponse {
   return {
     statusCode: 401,
     body: {
-      statusCode: 401,
       message: 'jwt expired',
       errors: [
         {
@@ -113,7 +105,6 @@ export function conflict(field: string): HttpResponse {
   return {
     statusCode: 409,
     body: {
-      statusCode: 409,
       message: 'already exists',
       errors: [
         {
@@ -128,7 +119,6 @@ export function forbidden(field: string): HttpResponse {
   return {
     statusCode: 403,
     body: {
-      statusCode: 403,
       message: 'denied',
       errors: [
         {
