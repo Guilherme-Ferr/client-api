@@ -1,5 +1,7 @@
 import 'dotenv/config'
 
+export const ERROR_REQUIRED_SCHEMA = (value: any) => `${value} não foi preenchido`
+
 export const RESPONSE_TYPE_ERROR = {
   ALREADY_EXISTS: 'ALREADY_EXISTS',
   NOT_FOUND: 'NOT_FOUND',
@@ -18,5 +20,5 @@ export const {
   HOST_MAILER,
   PORT,
   SERVER_BASE_URL,
-  TOKEN_SECRET_KEY,
+  TOKEN_SECRET,
 } = process.env
