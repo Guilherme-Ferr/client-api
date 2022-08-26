@@ -5,14 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts"
+    "dev": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts",
+    "build": "rimraf ./dist && tsc"
   },
   "repository": {
     "type": "git",
     "url": "git+https://gitlab.com/ecommerce-primi/backend/api-v2.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Guilherme Ferreira",
   "license": "ISC",
   "bugs": {
     "url": "https://gitlab.com/ecommerce-primi/backend/api-v2/issues"
@@ -46,6 +47,7 @@
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "nodemailer": "^6.7.8",
+    "rimraf": "^3.0.2",
     "sha256": "^0.2.0",
     "swagger-ui-express": "^4.5.0",
     "yup": "^0.32.11"

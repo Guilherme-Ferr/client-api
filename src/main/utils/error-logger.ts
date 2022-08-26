@@ -2,7 +2,7 @@ import { appendFile, existsSync, mkdirSync } from 'fs'
 import path from 'path'
 import { getFullDate } from '.'
 
-function errorLogger(error) {
+function errorLogger(error: Error) {
   const date = getFullDate()
 
   const pathError = path.resolve(__dirname, '..', '..', '..', 'log', 'error')

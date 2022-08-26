@@ -2,7 +2,7 @@ import { AuthenticationFeature, CreateTokenFeature } from '../../../data/feature
 import { AuthenticationUseCase } from '../../../domain/useCases'
 import { Controller, HttpResponse } from '../../protocols'
 import { AuthenticationDTO as DTO } from '../../dtos'
-import { ok } from '../../../main/utils/api-response'
+import { ok } from '../../helpers/api-response'
 import { authenticationSchema } from '../../../main/validators/schemas'
 
 export class AuthenticationController extends Controller<AuthenticationUseCase.Input, AuthenticationUseCase.Output> {

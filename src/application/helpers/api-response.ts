@@ -1,5 +1,5 @@
 import { Response } from 'express'
-import { HttpResponse } from '../../application/protocols'
+import { HttpResponse } from '../protocols'
 
 export function ok(payload = {}): HttpResponse {
   return {

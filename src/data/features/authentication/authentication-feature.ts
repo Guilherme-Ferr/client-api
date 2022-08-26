@@ -7,7 +7,7 @@ export class AuthenticationFeature implements AuthenticationUseCase {
 
   async execute(input: AuthenticationUseCase.Input): Promise<AuthenticationUseCase.Output> {
     const validUserEmail = await this.authenticationRepository.authenticate(input.email)
-    if (!validUserEmail || validUserEmail == null) throw new Error('NOT_FOUND_usuario')
+    if (!validUserEmail || validUserEmail == null) throw new 
     const validUserPassword = await validatePassword(input.password, validUserEmail.password)
     if (!validUserPassword) throw new Error('NOT_FOUND_usuario')
     return validUserEmail
