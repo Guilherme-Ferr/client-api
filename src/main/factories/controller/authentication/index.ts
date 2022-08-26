@@ -1,1 +1,1 @@
-export * from './make-authentication-factory'
+export * from './authentication-controller-factory'

@@ -1,8 +1,8 @@
 import { AuthenticationController } from '../../../../application/controllers'
-import { makeDBAuthentication, makeDBCreateToken } from '../../features'
+import { makeAuthenticationFeature, makeCreateTokenFeature } from '../../features'
 
 export const makeAuthenticationController = (): AuthenticationController => {
-  const authenticationService = makeDBAuthentication()
-  const createTokenService = makeDBCreateToken()
+  const authenticationService = makeAuthenticationFeature()
+  const createTokenService = makeCreateTokenFeature()
   return new AuthenticationController(authenticationService, createTokenService)
 }

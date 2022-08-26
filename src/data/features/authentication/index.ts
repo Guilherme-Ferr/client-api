@@ -1,2 +1,2 @@
-export * from './db-authentication-feature'
-export * from './db-create-token-feature'
+export * from './authentication-feature'
+export * from './create-token-feature'

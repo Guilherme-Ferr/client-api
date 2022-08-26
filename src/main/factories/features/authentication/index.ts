@@ -1,2 +1,2 @@
-export * from './db-authentication-factory'
-export * from './db-create-token-factory'
+export * from './authentication-feature-factory'
+export * from './create-token-feature-factory'

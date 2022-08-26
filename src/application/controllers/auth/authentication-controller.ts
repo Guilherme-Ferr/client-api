@@ -1,4 +1,4 @@
-import { DBAuthenticationFeature, DBCreateTokenFeature } from '../../../data/features'
+import { AuthenticationFeature, CreateTokenFeature } from '../../../data/features'
 import { AuthenticationUseCase } from '../../../domain/useCases'
 import { Controller, HttpResponse } from '../../protocols'
 import { AuthenticationDTO as DTO } from '../../dtos'
@@ -7,8 +7,8 @@ import { authenticationSchema } from '../../../main/validators/schemas'
 
 export class AuthenticationController extends Controller<AuthenticationUseCase.Input, AuthenticationUseCase.Output> {
   constructor(
-    private readonly authenticationFeature: DBAuthenticationFeature,
-    private readonly createTokenFeature: DBCreateTokenFeature,
+    private readonly authenticationFeature: AuthenticationFeature,
+    private readonly createTokenFeature: CreateTokenFeature,
   ) {
     super()
   }

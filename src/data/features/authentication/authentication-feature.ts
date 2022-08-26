@@ -2,7 +2,7 @@ import { AuthenticationUseCase } from '../../../domain/useCases'
 import { AuthenticationRepository } from '../../../infra/repositories'
 import { validatePassword } from '../../../main/utils/authentication'
 
-export class DBAuthenticationFeature implements AuthenticationUseCase {
+export class AuthenticationFeature implements AuthenticationUseCase {
   constructor(private readonly authenticationRepository: AuthenticationRepository) {}
 
   async execute(input: AuthenticationUseCase.Input): Promise<AuthenticationUseCase.Output> {
