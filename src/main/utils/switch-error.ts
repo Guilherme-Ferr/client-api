@@ -12,7 +12,7 @@ export function switchError(errorMessage: Error) {
     NOT_FOUND: (text: string) => notFound(text),
     ALREADY_EXISTS: (text: string) => conflict(text),
     NOT_ALLOWED: (text: string) => forbidden(text),
-    SERVER_ERROR: (text: string) => serverError(text),
+    SERVER_ERROR: () => serverError(),
   }
 
   try {
@@ -25,5 +25,6 @@ export function switchError(errorMessage: Error) {
     return obj[concatReturnError](formatedMessage[2].toLocaleLowerCase() || 'server error')
   } catch (e) {
     console.log('SERVER CHECK')
+    // serverError()
   }
 }

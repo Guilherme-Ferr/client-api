@@ -4,6 +4,6 @@
 
 /log/error/error.log
 
-/build
+/dist
 
 /coverage

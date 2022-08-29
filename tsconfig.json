@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "strict": true,
+    "strict": false,
     "resolveJsonModule": true,
     "outDir": "dist",
     "rootDirs": ["src", "tests"],
