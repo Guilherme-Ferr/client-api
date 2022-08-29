@@ -6,3 +6,11 @@ export interface User {
   created_at?: Date
   updated_at?: Date
 }
+
+export interface Client {
+  cpf: string
+  name: string
+  email: string
+  password: string
+  policyPrivacy: string
+}
