@@ -24,7 +24,6 @@ export function switchError(errorMessage: Error) {
 
     return obj[concatReturnError](formatedMessage[2].toLocaleLowerCase() || 'server error')
   } catch (e) {
-    console.log('SERVER CHECK')
-    // serverError()
+    return serverError()
   }
 }

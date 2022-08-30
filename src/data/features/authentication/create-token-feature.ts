@@ -1,10 +1,10 @@
 import { sign } from 'jsonwebtoken'
 import { CreateTokenUseCase } from '../../../domain/useCases'
-import { TOKEN_SECRET } from '../../../main/configs/constants'
+import { TOKEN_SECRET_KEY } from '../../../main/configs/constants'
 
 export class CreateTokenFeature implements CreateTokenUseCase {
   async execute(user: CreateTokenUseCase.Input): Promise<CreateTokenUseCase.Output> {
-    const token = sign({ user }, TOKEN_SECRET, {
+    const token = sign({ user }, TOKEN_SECRET_KEY, {
       subject: String(user.id_client_user),
       expiresIn: '30h',
     })
