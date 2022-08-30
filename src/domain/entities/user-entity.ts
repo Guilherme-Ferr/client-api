@@ -1,5 +1,5 @@
 export interface User {
-  id_client_user: number
+  id_client_user?: number
   name: string
   email: string
   password?: string
