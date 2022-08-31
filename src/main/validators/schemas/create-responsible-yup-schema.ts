@@ -8,4 +8,6 @@ export const createResponsibleSchema = async (params: any) => {
     cpf: stringRequired('cpf do usuario').max(15, 'Campo cpf deve ter no maximo 15 caracteres'),
     policyPrivacy: booleanRequired(true),
   })
+
+  await schema.validate(params, { abortEarly: false })
 }
