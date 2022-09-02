@@ -20,5 +20,5 @@ export const {
   HOST_MAILER,
   PORT,
   SERVER_BASE_URL,
-  TOKEN_SECRET_KEY,
+  TOKEN_SECRET,
 } = process.env
