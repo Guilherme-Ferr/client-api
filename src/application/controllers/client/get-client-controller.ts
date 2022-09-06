@@ -6,7 +6,7 @@ import { LoadResponsibleDTO as DTO } from '../../dtos/client/get-responsible-dto
 import { createResponsibleSchema } from '../../../main/validators/schemas/create-responsible-yup-schema'
 
 export class GetClientController extends Controller<LoadResponsibleUseCase.Input> {
-  constructor(private readonly createResponsibleFeature: CreateResponsibleFeature) {
+  constructor(private readonly createResponsibleFeatue: CreateResponsibleFeature) {
     super()
   }
 

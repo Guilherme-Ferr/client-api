@@ -1,1 +1,1 @@
-export * from './create-responsible-factory'
+export * from './create-responsible-feature-factory'
