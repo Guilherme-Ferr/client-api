@@ -1,6 +1,7 @@
 import { Client, User } from '../../../domain/entities'
 import { CreateResponsibleUseCase } from '../../../domain/useCases'
 import { CreateResponsibleRepository } from '../../../infra/repositories/client/create-responsible-repository'
+
 export class CreateResponsibleFeature implements CreateResponsibleUseCase {
   constructor(private readonly responsibleRepository: CreateResponsibleRepository) {}
 

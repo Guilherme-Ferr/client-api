@@ -1,2 +1,2 @@
 export * from './create-client'
-export * from './get-client'
+export * from './list-client'
