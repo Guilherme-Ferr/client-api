@@ -1,7 +1,7 @@
-import { LoadResponsibleRepository } from '../../../../infra/repositories/client'
+import { LoadResponsibleFeature } from '../../../../data/features'
 import { makeLoadResponsibleRepository } from '../../repositories/client/load-responsible-factory'
 
-export const makeLoadClientFeature = (): LoadResponsibleRepository => {
+export const makeLoadClientFeature = (): LoadResponsibleFeature => {
   const repository = makeLoadResponsibleRepository()
-  return new LoadResponsibleRepository(repository)
+  return new LoadResponsibleFeature(repository)
 }

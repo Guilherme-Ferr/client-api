@@ -5,6 +5,6 @@ export interface LoadResponsibleUseCase {
 }
 
 export namespace LoadResponsibleUseCase {
-  export type Input = Client
+  export type Input = { id: number }
   export type Output = User
 }

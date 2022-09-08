@@ -1,7 +1,7 @@
-import { ListClientController } from '../../../../application/controllers'
+import { LoadClientController } from '../../../../application/controllers'
 import { makeLoadClientFeature } from '../../features/client/load-client-feature-factory'
 
-export const makeListClientController = (): ListClientController => {
-  const listClientService = makeLoadClientFeature()
-  return new ListClientController(listClientService)
+export const makeLoadClientController = (): LoadClientController => {
+  const loadClientService = makeLoadClientFeature()
+  return new LoadClientController(loadClientService)
 }
