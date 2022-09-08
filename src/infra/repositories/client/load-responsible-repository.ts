@@ -1,4 +1,3 @@
-import { Client } from '../../../domain/entities'
 import knex from '../../../main/configs/database/knex'
 
 export class LoadResponsibleRepository {
