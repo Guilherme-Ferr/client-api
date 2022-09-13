@@ -1,11 +1,26 @@
+import sha256 from 'sha256'
 import { CreateUserUseCase } from '../../../domain/useCases'
-import { userRepository } from '../../../infra/repositories'
+import { UserRepository } from '../../../infra/repositories'
 
 export class CreateUserFeature implements CreateUserUseCase {
-  constructor(private readonly userRepository: userRepository) {}
+  constructor(private readonly userRepository: UserRepository) {}
 
-  async execute({ user }: CreateUserUseCase.Input): Promise<CreateUserUseCase.Output> {
-    const newUserId = await this.userRepository.create(user)
+  async execute({
+    name,
+    password,
+    privacy_policies,
+    id_email,
+    id_client,
+    id_user_type,
+  }: CreateUserUseCase.Input): Promise<CreateUserUseCase.Output> {
+    const newUserId = await this.userRepository.create({
+      name,
+      password: sha256(password),
+      privacy_policies,
+      id_email,
+      id_client,
+      id_user_type,
+    })
     return newUserId
   }
 }

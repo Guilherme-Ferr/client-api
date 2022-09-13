@@ -1,27 +1,11 @@
 export interface User {
-  id_client_user?: number
+  id_client_user?: string
   name: string
-  email: string
-  policyPrivacy: boolean
+  privacy_policies: boolean
   password: string
-  id_email: number
-  id_user: number
+  id_email: string
+  id_client: string
+  id_user_type: string
   created_at?: Date
   updated_at?: Date
-}
-
-export interface userUserRequest {
-  name: string
-  id_email: number
-  id_user: number
-  password: string
-  policyPrivacy: boolean
-}
-
-export interface user {
-  cpf: string
-  name: string
-  email: string
-  password: string
-  policyPrivacy: boolean
 }

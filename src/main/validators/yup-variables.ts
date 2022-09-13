@@ -5,6 +5,6 @@ export const stringRequired = (value: string) => yup.string().trim().required(ER
 
 export const arrayRequired = (value: []) => yup.array().required(ERROR_REQUIRED_SCHEMA(value))
 
-export const numberRequired = (value: number) => yup.number().required(ERROR_REQUIRED_SCHEMA(value))
+export const numberRequired = (value: string) => yup.number().required(ERROR_REQUIRED_SCHEMA(value))
 
 export const booleanRequired = (value: boolean) => yup.boolean().required(ERROR_REQUIRED_SCHEMA(value))

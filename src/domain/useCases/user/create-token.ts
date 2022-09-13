@@ -1,5 +1,3 @@
-import { User } from '../../entities'
-
 export interface CreateTokenUseCase {
   execute: (input: CreateTokenUseCase.Input) => Promise<CreateTokenUseCase.Output>
 }
