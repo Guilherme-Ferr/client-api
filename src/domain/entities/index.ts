@@ -1,2 +1,2 @@
-export * from './user-entity'
-export * from './token-entity'
+export * from './user-entities'
+export * from './token-entities'

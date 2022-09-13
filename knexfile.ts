@@ -5,7 +5,7 @@ import { DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME } from './src/main/configs/c
 
 const config: { [key: string]: Knex.Config } = {
   development: {
-    client: 'sqlite3',
+    user: 'sqlite3',
     connection: {
       filename: './dev.sqlite3',
     },
@@ -15,7 +15,7 @@ const config: { [key: string]: Knex.Config } = {
   },
 
   // staging: {
-  //   client: 'postgresql',
+  //   user: 'postgresql',
   //   connection: {
   //     database: 'my_db',
   //     user: 'username',
@@ -31,7 +31,7 @@ const config: { [key: string]: Knex.Config } = {
   // },
 
   // production: {
-  //   client: 'postgresql',
+  //   user: 'postgresql',
   //   connection: {
   //     database: DB_NAME,
   //     user: DB_USERNAME,

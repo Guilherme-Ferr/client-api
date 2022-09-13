@@ -1,4 +1,4 @@
-import { expired, makeReturn, notFound } from '../helpers/api-response'
+import { expired, makeReturn, notFound } from '../helpers'
 import { HttpRequest } from 'application/protocols'
 import { NextFunction, Response } from 'express'
 import { JsonWebTokenError, verify } from 'jsonwebtoken'

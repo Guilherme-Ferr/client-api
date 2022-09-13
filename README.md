@@ -1,9 +1,9 @@
 [<img align="rignt" alt="Plataforma Primi" width="150px" src="https://midia.primitecnologia.com/email/logo-primi.png" />
-](https://cliente.primi.com.br)
+](https://usere.primi.com.br)
 
 <div align="center">
-<h1>Essa é a API V2 da Plataforma [Cliente Primi](https://cliente.primi.com.br)</h1>
-<p>Nossa plataforma foi desenvolvida com o objetivo de ajudar os clientes a comprarem nossos selos.</p>
+<h1>Essa é a API V2 da Plataforma [usere Primi](https://usere.primi.com.br)</h1>
+<p>Nossa plataforma foi desenvolvida com o objetivo de ajudar os useres a comprarem nossos selos.</p>
 </div>
 
 <div align="center">
@@ -17,7 +17,7 @@
 
 ## 💻 Um pouco sobre mim
 
-- Desenvolvida para ajudar os clientes a comprarem selos;
+- Desenvolvida para ajudar os useres a comprarem selos;
 - Temos 3 microserviço os [indicadores](https://gitlab.com/primi-ecommerce/indicadores), [spylogs](https://gitlab.com/primi-ecommerce/spylogs) e [Omie](https://gitlab.com/primi-ecommerce/omie-integration);
 - Temos um banco de dados 😱 (MySql).
   <br />
