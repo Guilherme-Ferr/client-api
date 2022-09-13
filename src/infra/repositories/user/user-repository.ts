@@ -11,8 +11,8 @@ export class UserRepository {
       .first()
   }
 
-  async findById(id: number) {
-    return await knex('tb_user').select(' * ').where('tb_user.id', id).first()
+  async findById(id: string): Promise<User> {
+    return await knex<User>('tb_client_user').select('').where('tb_client_user.id_client_user', id).first()
   }
 
   async findByCpfAndEmail(cpf: string, email: string): Promise<User> {

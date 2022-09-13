@@ -1,12 +1,12 @@
 import { LoadUserUseCase } from '../../../domain/useCases'
-import { LoadUserRepository } from '../../../infra/repositories'
+import { UserRepository } from '../../../infra/repositories'
 
 export class LoadUserFeature implements LoadUserUseCase {
-  constructor(private readonly userRepository: LoadUserRepository) {}
+  constructor(private readonly userRepository: UserRepository) {}
 
-  async execute(input: LoadUserUseCase.Input): Promise<LoadUserUseCase.Output> {
-    const validCpf = await this.userRepository.findById(input.id)
-    if (validCpf != null) throw new Error('CPF_ALREADY_REGISTERED')
-    return validCpf
+  async execute({ id }: LoadUserUseCase.Input): Promise<LoadUserUseCase.Output> {
+    const user = await this.userRepository.findById(id)
+    if (!user || user === undefined) throw new Error('NOT_FOUND_usuario')
+    return user
   }
 }

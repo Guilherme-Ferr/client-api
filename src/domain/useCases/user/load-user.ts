@@ -1,10 +1,10 @@
-import { user, User } from '../../entities'
+import { User } from '../../entities'
 
 export interface LoadUserUseCase {
   execute: (input: LoadUserUseCase.Input) => Promise<LoadUserUseCase.Output>
 }
 
 export namespace LoadUserUseCase {
-  export type Input = { id: number }
+  export type Input = { id: string }
   export type Output = User
 }
