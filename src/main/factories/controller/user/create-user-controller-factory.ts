@@ -1,7 +1,9 @@
-import { CreateUserController } from '../../../../application/controllers'
+import { CreateClientController } from '../../../../application/controllers'
 import { makeCreateUserFeature } from '../../features'
 
-export const makeCreateUserController = (): CreateUserController => {
+export const makeCreateClientController = (): CreateClientController => {
+  const createCompanyFeature = makeCreateUserFeature()
+  const createEmailFeature = makeCreateUserFeature()
   const createUserFeature = makeCreateUserFeature()
-  return new CreateUserController(createUserFeature)
+  return new CreateClientController(createCompanyFeature, createEmailFeature, createUserFeature)
 }

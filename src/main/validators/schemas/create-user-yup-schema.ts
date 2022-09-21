@@ -1,7 +1,7 @@
 import * as yup from 'yup'
 import { booleanRequired, stringRequired } from '../yup-variables'
 
-export const createUserSchema = async (params: any) => {
+export const createClientSchema = async (params: any) => {
   const schema = yup.object().shape({
     name: stringRequired('nome do usuario').max(100, 'O campo "nome" deve ter no maximo 100 caracteres'),
     password: stringRequired('senha do usuario').max(255, 'Campo senha deve ter no maximo 255 caracteres'),

@@ -1,7 +1,7 @@
-import { CreateUserUseCase } from '../../../domain/useCases'
+import { CreateClientUseCase } from '../../../domain/useCases'
 
-export namespace CreateUserDTO {
-  export type Request = CreateUserUseCase.Input
+export namespace CreateClientDTO {
+  export type Request = CreateClientUseCase.Input
 
-  export type Response = CreateUserUseCase.Output
+  export type Response = CreateClientUseCase.Output
 }

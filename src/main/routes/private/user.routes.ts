@@ -6,7 +6,7 @@ import { makeLoadUserController } from '../../factories/controller'
 const router = Router()
 
 export default (route: Router) => {
-  route.get('/user/:id', ensureAuthenticated, adaptRoute(makeLoadUserController()))
+  route.get('/user/:id', adaptRoute(makeLoadUserController()))
 }
 
 export { router }
