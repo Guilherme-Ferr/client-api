@@ -5,5 +5,5 @@ export interface AuthenticateUserRepository {
 export namespace AuthenticateUserRepository {
   export type Input = { email: string; password: string }
 
-  export type Output = { id_client_user: number; name: string }
+  export type Output = { id_client_user: string; name: string }
 }

@@ -1,11 +1,17 @@
 export interface Company {
-  id_client_user?: number
-  name: string
-  email: string
-  policyPrivacy: boolean
-  password: string
-  id_email: number
-  id_user: number
+  id_client?: string
+  company_name: string
+  company_avatar: string
+  state_registration: string
+  cnpj: string
+  owner_cpf: string
+  owner_name: string
+  register: string
+  facebook_link: string
+  instagram_link: string
+  whatsapp: string
+  visibility_permission: boolean
   created_at?: Date
   updated_at?: Date
+  finish_at?: string
 }

@@ -4,16 +4,15 @@ import { DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME } from './src/main/configs/c
 // Update with your config settings.
 
 const config: { [key: string]: Knex.Config } = {
-  development: {
-    user: 'sqlite3',
-    connection: {
-      filename: './dev.sqlite3',
-    },
-    migrations: {
-      directory: './src/infra/migrations',
-    },
-  },
-
+  // development: {
+  //   user: 'sqlite3',
+  //   connection: {
+  //     filename: './dev.sqlite3',
+  //   },
+  //   migrations: {
+  //     directory: './src/infra/migrations',
+  //   },
+  // },
   // staging: {
   //   user: 'postgresql',
   //   connection: {
@@ -29,7 +28,6 @@ const config: { [key: string]: Knex.Config } = {
   //     tableName: 'knex_migrations',
   //   },
   // },
-
   // production: {
   //   user: 'postgresql',
   //   connection: {

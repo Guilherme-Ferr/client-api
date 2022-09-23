@@ -23,12 +23,12 @@ export namespace CreateClientUseCase {
       facebook_link: string
       instagram_link: string
       whatsapp: string
-      visibility_permission: string
+      visibility_permission: boolean
     }
     email: {
       id_email_type: string
       email: string
     }
   }
-  export type Output = number
+  export type Output = string
 }

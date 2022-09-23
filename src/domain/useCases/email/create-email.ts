@@ -4,10 +4,7 @@ export interface CreateEmailUseCase {
 
 export namespace CreateEmailUseCase {
   export type Input = {
-    email: {
-      id_email_type: string
-      email: string
-    }
+    email: string
   }
-  export type Output = number
+  export type Output = string
 }

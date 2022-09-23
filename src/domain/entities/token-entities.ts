@@ -1,6 +1,6 @@
 export interface Token {
-  id_token: number
-  id_token_type: number
+  id_token: string
+  id_token_type: string
   tag: string
   created_at?: Date
   updated_at?: Date

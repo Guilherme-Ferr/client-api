@@ -3,7 +3,7 @@ export interface CreateTokenUseCase {
 }
 
 export namespace CreateTokenUseCase {
-  export type Input = { id_client_user: number; name: string }
+  export type Input = { id_client_user: string; name: string }
 
   export type Output = { token: string }
 }
