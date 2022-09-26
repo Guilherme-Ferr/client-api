@@ -17,11 +17,16 @@ export class CreateClientController extends Controller<DTO.Request, DTO.Response
     await createClientSchema({ user, email })
     const emailId = await this.createEmailFeature.execute(email)
     const companyId = await this.createCompanyFeature.execute(company)
+
+    //cadastrar endereço do client
+    //cadastrar phone do client
+
     const userId = await this.createUserFeature.execute({
       ...user,
       id_client: String(companyId),
       id_email: String(emailId),
     })
-    return ok(userId)
+
+    return ok({ userId })
   }
 }

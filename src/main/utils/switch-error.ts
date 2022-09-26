@@ -1,29 +1,23 @@
-import { badRequest, conflict, forbidden, notFound, serverError } from '../../application/helpers'
+import { badRequest, forbidden, notFound, serverError, unauthorized } from '../../application/helpers'
 import errorLogger from './error-logger'
 import { formatYupError } from './yup-error-formatter'
 import { ValidationError } from 'yup'
-import { RESPONSE_TYPE_ERROR } from '../configs/constants'
 
-export function switchError(errorMessage: Error) {
-  if (errorMessage instanceof ValidationError) return badRequest(formatYupError(errorMessage))
-  errorLogger(errorMessage)
-
-  const obj = {
-    NOT_FOUND: (text: string) => notFound(text),
-    ALREADY_EXISTS: (text: string) => conflict(text),
-    NOT_ALLOWED: (text: string) => forbidden(text),
-    SERVER_ERROR: () => serverError(),
-  }
-
-  try {
-    const formatedMessage = errorMessage.message.split('_')
-
-    const [state, action] = RESPONSE_TYPE_ERROR[formatedMessage[0] + '_' + formatedMessage[1]].split('_')
-
-    const concatReturnError = state + '_' + action || 'SERVER_ERROR'
-
-    return obj[concatReturnError](formatedMessage[2].toLocaleLowerCase() || 'server error')
-  } catch (e) {
-    return serverError()
+export function switchError(err: Error | ValidationError) {
+  errorLogger(err)
+  if (err instanceof ValidationError) return badRequest(formatYupError(err))
+  else {
+    switch (err.name) {
+      case 'NOTFOUNDERROR':
+        return notFound(err.message)
+      case 'SERVERERROR':
+        return serverError()
+      case 'ALREADYEXISTS':
+        return notFound(err.message)
+      case 'UNAUTHORIZED':
+        return unauthorized(err.message)
+      case 'FORBIDEN':
+        return forbidden(err.message)
+    }
   }
 }

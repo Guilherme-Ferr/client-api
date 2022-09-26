@@ -17,7 +17,7 @@ export class CreateCompanyFeature implements CreateCompanyUseCase {
     whatsapp,
     visibility_permission,
   }: CreateCompanyUseCase.Input): Promise<CreateCompanyUseCase.Output> {
-    const newCompanyId = await this.companyRepository.create({
+    return await this.companyRepository.create({
       company_name,
       company_avatar,
       state_registration,
@@ -30,6 +30,5 @@ export class CreateCompanyFeature implements CreateCompanyUseCase {
       whatsapp,
       visibility_permission,
     })
-    return newCompanyId
   }
 }

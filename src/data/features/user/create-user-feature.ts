@@ -13,7 +13,7 @@ export class CreateUserFeature implements CreateUserUseCase {
     id_client,
     id_user_type,
   }: CreateUserUseCase.Input): Promise<CreateUserUseCase.Output> {
-    const newUserId = await this.userRepository.create({
+    return await this.userRepository.create({
       name,
       password: sha256(password),
       privacy_policies,
@@ -21,6 +21,5 @@ export class CreateUserFeature implements CreateUserUseCase {
       id_client,
       id_user_type,
     })
-    return newUserId
   }
 }

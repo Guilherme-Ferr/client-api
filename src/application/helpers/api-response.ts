@@ -1,6 +1,22 @@
 import { Response } from 'express'
 import { HttpResponse } from '../protocols'
 
+export class NotFoundError extends Error {
+  constructor(paramNotFound: string) {
+    super(paramNotFound)
+    this.name = 'NOTFOUNDERROR'
+  }
+}
+
+export class ServerError extends Error {
+  constructor() {
+    super(`Ocorreu um erro, tente novamente mais tarde!`)
+    this.name = 'SERVERERROR'
+  }
+}
+
+//criar classes de erro pra alreadyExists, expired, forbiden e unauthorized
+
 export function ok(payload = {}): HttpResponse {
   return {
     statusCode: 200,
@@ -26,7 +42,7 @@ export function badRequest(payload = {}): HttpResponse {
     statusCode: 400,
     body: {
       message: 'bad request',
-      payload,
+      errors: payload,
     },
   }
 }

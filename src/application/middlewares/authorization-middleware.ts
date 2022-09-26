@@ -1,5 +1,5 @@
 import { expired, makeReturn, notFound } from '../helpers'
-import { HttpRequest } from 'application/protocols'
+import { HttpRequest } from '../protocols'
 import { NextFunction, Response } from 'express'
 import { JsonWebTokenError, verify } from 'jsonwebtoken'
 import { TOKEN_SECRET } from '../../main/configs/constants'
